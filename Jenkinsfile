@@ -17,7 +17,7 @@ pipeline {
                 // Clona el repositorio público de GitHub
                 checkout([$class: 'GitSCM', 
                           branches: [[name: '*/main']], 
-                          userRemoteConfigs: [[url: 'https://github.com/tu-usuario/tu-repositorio.git']]])
+                          userRemoteConfigs: [[url: 'https://github.com/xestoso11/java.git']]])
             }
         }
         stage('Build') {
