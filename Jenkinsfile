@@ -25,9 +25,7 @@ pipeline {
             steps {
                 // Ejecuta el comando 'mvn package' dentro del contenedor Docker
                  script {
-                    docker.inside('-v $PWD:/workspace') {
                         sh 'mvn -B -DskipTests clean package'
-                    }
                 }
                 //sh "docker version"
             }
