@@ -25,7 +25,7 @@ pipeline {
             steps {
                 // Ejecuta el comando 'mvn package' dentro del contenedor Docker
                  script {
-                    docker.image('maven:3.9.6-amazoncorretto-8').inside('-v $PWD:/workspace') {
+                    docker.inside('-v $PWD:/workspace') {
                         sh 'mvn -B -DskipTests clean package'
                     }
                 }
