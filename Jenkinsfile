@@ -2,7 +2,8 @@ pipeline {
     agent {
         docker {
             // Utiliza la imagen Maven 3.9.6 con Amazon Corretto 8 como base
-            image 'maven:3.9.6-amazoncorretto-8'
+            // image 'maven:3.9.6-amazoncorretto-8'
+            images 'docker'
             // Monta el directorio de trabajo dentro del contenedor
             //args '-v $PWD:/workspace'
         }
