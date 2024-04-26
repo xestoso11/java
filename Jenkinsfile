@@ -5,7 +5,7 @@ pipeline {
             image 'maven:3.9.6-amazoncorretto-8'
             // image 'docker'
             // Monta el directorio de trabajo dentro del contenedor
-            //args '-v $PWD:/workspace'
+            args '-v $PWD:/workspace'
         }
     }
     environment {
