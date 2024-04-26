@@ -1,5 +1,12 @@
 pipeline {
-
+    agent {
+        docker {
+            // Utiliza la imagen Maven 3.9.6 con Amazon Corretto 8 como base
+            //image 'maven:3.9.6-amazoncorretto-8'
+            // Monta el directorio de trabajo dentro del contenedor
+            //args '-v $PWD:/workspace'
+        }
+    }
     environment {
         // Define la variable de entorno JAVA_HOME para la compilación con Maven
         JAVA_HOME = '/usr/lib/jvm/java-1.8.0-amazon-corretto'
